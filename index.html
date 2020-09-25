@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calendar</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-cal"></script>
+  <link rel=stylesheet href="https://unpkg.com/vue-cal/dist/vuecal.css">
+  <link rel=stylesheet href="style.css">
+</head>
+
+<body>
+  <div class="all">
+    <div class="book">
+      預約行事曆
+    </div>
+    <div id="app">
+      <vue-cal :time="true" active-view="week" xsmall :events="events" :disable-views="['years', 'year', 'month']" />
+      <template v-slot:cell-content="{ cell, view, goNarrower, events }">
+        <div class="vuecal__cell-date" :class="view.id" @click="goNarrower"><span class="clickable">{{ cell.content }}</span></div><span class="vuecal__cell-events-count"
+          v-if="view.id === 'month' &amp;&amp; events.length">{{ events.length }}</span><span class="vuecal__no-event" v-if="['week', 'day'].includes(view.id) &amp;&amp; !events.length"></span>
+      </template>
+      </vue-cal>
+      <div class="none">aaa</div>
+      <div class="b" align="center">
+        <button class="bookbutton" type="button" name="booking">+新增預約</button>
+      </div>
+      <div class="none">aaa</div>
+      <div class="none">aaa</div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

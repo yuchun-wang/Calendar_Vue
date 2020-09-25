@@ -1,0 +1,52 @@
+* {font: 10px sans-serif;margin: 0;padding: 0;}
+
+/* html, body{
+  height: 667px;
+  width: 375px;
+} */
+
+.all{
+  height: 667px;
+  width: 375px;
+}
+
+.bookbutton{
+  background-color: #7F74B4;
+  color: white;
+  height: 30px;
+  width: 100px;
+  position: relative;
+  border: 0px;
+  border-radius: 8px;
+}
+
+.vuecal__view-btn{
+  background-color: #DEDAF4;
+  color: #7F74B4;
+}
+
+.vuecal__title-bar{
+  display: none;
+}
+
+.book{
+  position: relative;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.none{
+  opacity : 0;
+}
+
+#app {
+  height: 650px;
+  width: 375px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing:border-box;
+  position: absolute;
+}
+
+a {position: fixed;top: 5px;right: 5px;color: #333;}
